@@ -13,7 +13,6 @@ class SiteNavbar extends HTMLElement {
           </a>
 
           <a href="contacto.html">Contacto</a>
-          <a href="login.html">Login</a>
           <a href="historial.html">Historial</a>
 
         </nav>

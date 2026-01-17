@@ -43,8 +43,6 @@ function mostrarProductosPaginados() {
 
   const paginaProductos = productosFiltrados.slice(inicio, fin);
 
-
-  if paginaAnterior.inderex
   paginaProductos.forEach(producto => {
     contenedor.innerHTML += `
       <div class="card">
