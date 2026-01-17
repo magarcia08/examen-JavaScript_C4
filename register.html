@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro | FakeStore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="js/components/navbar.js" defer></script>
+  <script src="js/components/footer.js" defer></script>
+</head>
+<body>
+
+<site-navbar></site-navbar>
+
+<main class="auth-wrapper">
+
+  <section class="auth-card">
+
+    <h2>Crear cuenta</h2>
+    <p class="auth-subtitle">
+      Regístrate para comprar y llevar el control de tus pedidos
+    </p>
+
+    <div class="auth-form">
+
+      <label>Nombre completo</label>
+      <input type="text" id="nombre" placeholder="Ej: María Alejandra">
+
+      <label>Correo electrónico</label>
+      <input type="email" id="email" placeholder="correo@ejemplo.com">
+
+      <label>Contraseña</label>
+      <input type="password" id="password" placeholder="********">
+
+      <button class="btn btn-primary" onclick="registrar()">
+        Crear cuenta
+      </button>
+
+      <p class="auth-link">
+        ¿Ya tienes una cuenta?
+        <a href="login.html">Inicia sesión</a>
+      </p>
+
+    </div>
+
+  </section>
+
+</main>
+
+<site-footer></site-footer>
+
+<script>
+function registrar() {
+  const nombre = document.getElementById("nombre").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (!nombre || !email || !password) {
+    alert("Todos los campos son obligatorios");
+    return;
+  }
+
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+  if (usuarios.some(u => u.email === email)) {
+    alert("Este correo ya está registrado");
+    return;
+  }
+
+  usuarios.push({
+    nombre,
+    email,
+    password,
+    rol: "user",
+    historial: []
+  });
+
+  localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  alert("Cuenta creada correctamente");
+  location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

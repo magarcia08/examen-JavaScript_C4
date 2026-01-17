@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart House | Productos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Smart House</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="productos.html">Productos</a>
+    <a href="contactanos.html">Contáctanos</a>
+  </nav>
+</header>
+
+<section class="shop-container">
+
+  <!-- FILTROS -->
+  <aside class="filters">
+    <h3>Categoría</h3>
+    <select id="filtroCategoria"></select>
+
+    <h3>Ordenar</h3>
+    <select id="ordenar">
+      <option value="default">Por defecto</option>
+      <option value="precioAsc">Precio ↑</option>
+      <option value="precioDesc">Precio ↓</option>
+      <option value="nombre">Nombre A-Z</option>
+    </select>
+  </aside>
+
+  <!-- PRODUCTOS -->
+  <main class="products-area">
+    <h2>Nuestros Productos</h2>
+    <div id="listaProductos" class="products-grid"></div>
+  </main>
+
+  <!-- CARRITO -->
+  <aside class="cart">
+    <h3>🛒 Carrito</h3>
+    <div id="itemsCarrito"></div>
+    <p class="cart-total">Total: $<span id="totalCarrito">0</span></p>
+  </aside>
+
+</section>
+
+<footer class="footer">
+  <p>© 2025 Smart House</p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FakeStore | Carrito</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="js/components/navbar.js" defer></script>
+  <script src="js/components/footer.js" defer></script>
+</head>
+<body>
+
+<site-navbar></site-navbar>
+
+<main class="contenido carrito-wrapper">
+
+  <header class="carrito-header">
+    <h2>Tu carrito</h2>
+    <p>Modifica cantidades antes de confirmar tu compra</p>
+  </header>
+
+  <!-- LISTA -->
+  <section id="carrito-lista" class="carrito-lista">
+  </section>
+
+  <!-- RESUMEN -->
+  <section class="carrito-resumen">
+    <h3 id="total">Total: $0</h3>
+    <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar carrito</button>
+  </section>
+
+  <hr>
+
+  <!-- CHECKOUT -->
+  <section class="checkout-card">
+    <h3>Datos de envío</h3>
+
+    <form class="checkout-form" onsubmit="event.preventDefault(); confirmarCompra();">
+
+      <div class="form-group">
+        <label>Nombre completo</label>
+        <input type="text" id="nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label>Dirección</label>
+        <input type="text" id="direccion" required>
+      </div>
+
+      <div class="form-group">
+        <label>Teléfono</label>
+        <input type="text" id="telefono" required>
+      </div>
+
+      <div class="form-group">
+        <label>Código postal</label>
+        <input type="text" id="postal" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        Confirmar compra
+      </button>
+
+    </form>
+  </section>
+
+</main>
+
+<site-footer></site-footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FakeStore | Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Componentes -->
+  <script src="js/components/navbar.js" defer></script>
+  <script src="js/components/footer.js" defer></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<site-navbar></site-navbar>
+
+<main class="inicio">
+
+  <!-- HERO CON IMAGEN -->
+  <section class="hero contenido">
+    <h2>Compra fácil, rápido y seguro</h2>
+    <p>
+      FakeStore es una tienda virtual creada para aprender desarrollo web,
+      usando productos reales obtenidos desde una API pública.
+    </p>
+    <a href="catalogo.html" class="btn">Ver catálogo</a>
+
+    <img 
+      src="/img/img3.jpg"
+      alt="Compras online"
+      style="width:100%; margin-top:30px; border-radius:12px;"
+    >
+  </section>
+
+  <section class="contenido">
+    <h3>Productos destacados</h3>
+    <p>Explora algunas categorías populares de nuestra tienda.</p>
+
+    <div class="productos">
+
+      <div class="card">
+        <img src="/img/accesorios.jpg" alt="Mochila">
+        <h4>Accesorios</h4>
+        <p>Estilo y funcionalidad</p>
+      </div>
+
+      <div class="card">
+        <img src="/img/ropa.jpg" alt="Ropa">
+        <h4>Ropa</h4>
+        <p>Moda para todos</p>
+      </div>
+
+      <div class="card">
+        <img src="/img/electronic.jpg" alt="Electrónica">
+        <h4>Electrónica</h4>
+        <p>Tecnología moderna</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN BENEFICIOS -->
+  <section class="contenido">
+    <h3>¿Por qué elegir FakeStore?</h3>
+    <ul>
+      <li>✔ Productos obtenidos desde una API real</li>
+      <li>✔ Carrito de compras con guardado automático</li>
+      <li>✔ Filtros y búsqueda dinámica</li>
+      <li>✔ Diseño adaptable a cualquier dispositivo</li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<site-footer></site-footer>
+
+</body>
+</html>

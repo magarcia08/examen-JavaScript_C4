@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>FakeStore | Catálogo</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/components/navbar.js" defer></script>
+  <script src="js/components/footer.js" defer></script>
+</head>
+<body>
+
+<site-navbar></site-navbar>
+
+<section class="contenido">
+  <h2>Nuestros Productos</h2>
+  <p>
+    Aquí encontrarás una variedad de productos organizados por categoría,
+    con opciones de búsqueda y ordenamiento para facilitar tu experiencia.
+  </p>
+</section>
+
+<section class="filtros">
+  <input type="text" id="buscar" placeholder="Buscar producto por nombre">
+  
+  <select id="categoria">
+    <option value="all">Todas las categorías</option>
+  </select>
+
+  <select id="ordenar">
+    <option value="default">Ordenar</option>
+    <option value="precio-asc">Precio menor a mayor</option>
+    <option value="precio-desc">Precio mayor a menor</option>
+  </select>
+</section>
+
+
+
+<main id="lista-productos" class="productos">
+
+
+  <!-- Productos renderizados desde JS -->
+</main>
+
+<div class="paginacion">
+  <button id="btn-anterior" onclick="paginaAnterior()">Anterior</button>
+  <span id="pagina-actual"></span>
+  <button id="btn-siguiente" onclick="paginaSiguiente()">Siguiente</button>
+</div>
+
+
+<site-footer></site-footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
