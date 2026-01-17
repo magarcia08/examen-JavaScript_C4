@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <h4>🧾 Compra #${compra.id}</h4>
           <p><strong>Fecha:</strong> ${compra.fecha}</p>
           <ul>${productosHTML}</ul>
+          
           <p class="total">Total: $${compra.total.toFixed(2)}</p>
         </div>
       `;
